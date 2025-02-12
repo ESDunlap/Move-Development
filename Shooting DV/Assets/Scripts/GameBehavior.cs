@@ -39,11 +39,7 @@ public class GameBehavior : MonoBehaviour
             }
         }
     }
-    void RestartLevel()
-    {
-        SceneManager.LoadScene(0);
-        Time.timeScale = 1.0f;
-    }
+
     void Update()
     {
         if(_itemsCollected >= maxItems)
@@ -59,6 +55,7 @@ public class GameBehavior : MonoBehaviour
         else
         {
             labelText = "Collect all 4 items and win your freedom!";
+            Time.timeScale = 1.0f;
         }
     }
 
@@ -75,14 +72,16 @@ public class GameBehavior : MonoBehaviour
         {
             if (GUI.Button(new Rect(Screen.width / 2 - 100, Screen.height / 2 - 50, 200, 100), "YOU WON!"))
             {
-                RestartLevel();
+                SceneManager.LoadScene(0);
+                Time.timeScale = 1.0f;
             }
         }
         if (showLossScreen)
         {
             if (GUI.Button(new Rect(Screen.width / 2 - 100, Screen.height / 2 - 50, 200, 100), "You lose..."))
             {
-                RestartLevel();
+                SceneManager.LoadScene(0);
+                Time.timeScale = 1.0f;
             }
         }
     }
