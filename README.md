@@ -1,2 +1,2 @@
 # Shooting Development
- The Shooting, Jump, and UI added
+ The enemy AI added and a loss condition https://esdunlap.github.io/Move-Development/
