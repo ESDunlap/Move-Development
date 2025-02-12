@@ -39,10 +39,13 @@ public class GameBehavior : MonoBehaviour
             }
         }
     }
+    void Start()
+    {
+        Time.timeScale = 1.0f;
+    }
     void RestartLevel()
     {
         SceneManager.LoadScene(0);
-        Time.timeScale = 1.0f;
     }
     void Update()
     {
@@ -59,7 +62,6 @@ public class GameBehavior : MonoBehaviour
         else
         {
             labelText = "Collect all 4 items and win your freedom!";
-            Time.timeScale = 1.0f;
         }
     }
 
